@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Details</title>
+    <style>
+        body{
+            background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/d9449681381729.5cfe517a357b2.jpg');
+            background-size: cover;
+        }
+        .employee-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s; 
+            margin-bottom: 20px; 
+            width: 80%; 
+            margin: 0 auto; 
+            text-align: center; 
+        }
+        .employee-container:hover {
+            transform: scale(1.05); 
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%; 
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Employee Salary Details</center></h1>
+    {% for salary in salaries %}
+    <div class="employee-container">
+        <h1>{{ salary.emp_name }}</h1>
+        <div style="overflow-x:auto;">
+            <table class="salary-table">
+                <tr>
+                    <th>Month</th>
+                    <th>No of Days Present</th>
+                    <th>Total Leave Taken</th>
+                    <th>Total Late Entries</th>
+                    <th>Number of Overtime Hours</th>
+                    <th>Total Salary</th>
+                </tr>
+                {% for detail in salary.salary_details %}
+                <tr>
+                    <td>{{ detail.month }}</td>
+                    <td>{{ detail.No_of_days_Present }}</td>
+                    <td>{{ detail.total_leave_taken }}</td>
+                    <td>{{ detail.total_late_entries }}</td>
+                    <td>{{ detail.total_overtime_hours }}</td>
+                    <td>{{ '%.2f'|format(detail.total_salary) }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    <div style="margin-bottom: 20px;"></div> <!-- Add vertical space between containers -->
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-image: url('https://static.vecteezy.com/system/resources/previews/004/257/968/non_2x/abstract-purple-fluid-wave-background-free-vector.jpg');
+      background-color: #f0f0f0; 
+      font-family: Arial, sans-serif;
+      margin: 0; 
+      display: grid;
+      grid-template-rows: auto 1fr; 
+      min-height: 100vh; 
+    }
+
+    .container {
+      background-image: url('https://img.freepik.com/free-vector/abstract-background-vertical-color-white-shape_361591-4464.jpg?t=st=1717520942~exp=1717524542~hmac=6186248b64caabcbaf6ef16b4e39d54427bc2c26dc1d5b1b3032a9873e8aaf64&w=360');
+      background-color: #fff; 
+      padding: 30px;
+      margin: 20px auto; 
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 800px; 
+      height: 600px; 
+    }
+
+    .profile-picture {
+      width: 120px; 
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      align-self: center; 
+    }
+
+    h1 {
+      color: #333; 
+      text-align: center;
+      margin-top: 0; 
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .icon-wrapper {
+      display: flex;
+      justify-content: space-around;
+      width: 100%; 
+      margin-top: 20px;
+    }
+    .circular-icon {
+      width: 150px; 
+      height: 150px;
+      border-radius: 50%;
+      background-color: #4CAF50; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px; 
+    }
+    .circular-icon i {
+      color: white;
+      font-size: 48px; 
+    }
+    .icon-label {
+      color: #333;
+      font-size: 18px; 
+      margin-top: 10px;
+      text-align: center;
+    }
+    .icon-label a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      .icon-wrapper {
+        flex-wrap: wrap;
+      }
+
+      .circular-icon {
+        margin-right: 20px; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://img.freepik.com/premium-vector/business-avatar_895273-101.jpg?w=740" class="profile-picture" alt="Profile Picture">
+    <h1>Welcome Admin!</h1>
+    <p>Here you can manage the details of the employees:</p>
+    <div class="icon-wrapper">
+      <div>
+        <div class="circular-icon" >
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <span class="icon-label"><a href="/admin/view_employees">View Employee Details</a></span>
+      </div>
+
+      <div>
+        <div class="circular-icon" >
+          <i class="fas fa-money-check-alt"></i>
+        </div>
+        <span class="icon-label"><a href="/admin/view_salary">View Salary Received by Employees</a></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

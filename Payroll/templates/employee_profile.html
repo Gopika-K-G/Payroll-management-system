@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/abstract-purple-background_698452-1706.jpg?t=st=1718039929~exp=1718043529~hmac=c39d608595b480621289762920a483e60878fd3851cd09a544678405165acca4&w=1060'); /* Background image for the body */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 800px; 
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            text-align: center;
+            border-radius: 10px;
+        }
+        .profile-pic {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            object-fit: cover;
+            margin-bottom: 20px;
+            display: block; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .detail-container {
+            margin-bottom: 15px;
+            text-align: left;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9; 
+        }
+        p {
+            margin: 10px 0;
+        }
+        .editable {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            cursor: pointer;
+        }
+        .save-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .save-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="profile-pic" src="https://img.freepik.com/premium-vector/maid-vector-icon-illustration-house-cleaning-iconset_904970-29427.jpg?w=740" alt="Profile Picture"> <!-- Profile picture with the provided URL -->
+        <div class="detail-container">
+            <p><strong>Name: </strong>{{ employee.emp_name }}</p>
+        </div>
+        <div class="detail-container">
+            <p><strong>Position: </strong>{{ employee.position }}</p>
+        </div>
+        <div class="detail-container">
+            <p><strong>Age: </strong>{{ employee.age }}</p>
+        </div>
+        <div class="detail-container">
+            <p><strong>Date of Birth: </strong>{{ employee.dob }}</p>
+        </div>
+        <div class="detail-container">
+            <p><strong>Email: </strong>{{ employee.email_id }}</p>
+        </div>
+        <div class="detail-container">
+            <p><strong>Phone: </strong> {{ employee.phone_no }}</p>
+        </div>
+        <div class="detail-container">
+            <p><strong>Address: </strong> {{ employee.address }}</p>
+        </div>
+    </div>
+
+</body>
+</html>

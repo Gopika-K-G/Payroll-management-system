@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/premium-vector/modern-abstract-geometric-purple-background_77895-106.jpg?w=1060'); /* Replace 'background.jpg' with your image path */
+    background-size: cover;
+    filter: brightness(0.5); 
+}
+
+.content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.logo img {
+    width: 100px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.login-buttons button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.navbar {
+    background-color: #007bff;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+body {
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url("https://img.freepik.com/premium-vector/modern-abstract-geometric-purple-background_77895-106.jpg?w=1060"); /* Replace with your image path */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+  }
+  
+  .login-form-wrapper {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 30px;
+    border-radius: 5px;
+    color: white; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-form-wrapper h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    display: block; 
+  }
+  
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+  }
+  
+  button{
+
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45A049; 
+  }
+    </style>
+   
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-form-wrapper">
+        <h2>Employee Login</h2>
+        <form id="admin-login-form" method="post" action="/employee">
+            <label for="admin-id">User ID:</label>
+            <input type="text" id="admin-id" name="username" required>
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" name="password" required>
+            <button type="submit">Login</button><br><br>
+            {% if error %}
+                <p style="color:red;">{{ error }}</p>
+            {% endif %}
+            <button onclick="location.href='/'">Back to Home</button>
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>
